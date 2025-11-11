@@ -1,0 +1,401 @@
+:root{
+  --bg: #FAF9F7;
+  --fg: #333333;
+  --muted:#5A5A5A;
+  --line:#E8E5E0;
+  --card:#FFFFFF;
+  --accent:#9C1B1F;
+  --accent-ink:#7F1619;
+  --shadow: 0 10px 24px rgba(20,16,10,0.08);
+  --radius: 12px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,Segoe UI,Inter,Roboto,Helvetica,Arial}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+.wrap{max-width:1120px;margin:0 auto;padding:20px}
+
+/* Topbar */
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+.nav{display:flex;gap:16px;flex-wrap:wrap}
+.nav a{padding:8px 10px;border-radius:9px;border:1px solid transparent}
+.nav a:hover{border-color:var(--line);background:#fff}
+
+/* Buttons */
+.btn{appearance:none;border:none;cursor:pointer;font-weight:650;padding:12px 18px;border-radius:10px;transition:.15s ease;display:inline-flex;align-items:center;gap:10px}
+.btn:focus{outline:2px solid #0002;outline-offset:2px}
+.btn-primary{background:#111;color:#fff}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(0,0,0,.18)}
+.btn-ghost{background:transparent;border:1px solid #111;color:#111}
+.btn-ghost:hover{background:#111;color:#fff}
+.btn-outline{background:transparent;border:1px solid var(--accent);color:var(--accent-ink)}
+
+.chip{display:inline-block;font-size:.78rem;padding:6px 10px;border-radius:999px;background:#111;color:#fff}
+.kicker{letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-size:.78rem}
+.h1{font-weight:750;font-size:2.3rem;line-height:1.2;margin:8px 0 10px}
+.h2{font-weight:750;font-size:1.6rem;margin:0 0 10px}
+.sub{color:#4a4a4a;max-width:60ch}
+.cta-row{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+
+.section{margin-top:44px}
+.divider{height:1px;background:var(--line);margin:28px 0}
+footer{margin:40px 0 20px;color:#777;font-size:.9rem}
+
+/* CTA sotto le card */
+.benefits-cta{
+  margin: 18px 0 8px;
+  text-align: center;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+/* Allineamento card e bottoni */
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.benefit {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.benefit-media img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.benefit-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.chip {
+  display: inline-block;
+  width: 150px;
+  max-width: 100%;
+}
+
+.btn-unlock {
+  margin-top: auto;
+  align-self: center;      /* centra il bottone */
+  width: 90%;              /* riduce la larghezza */
+  margin-bottom: 12px;     /* piccolo respiro dal bordo inferiore */
+}
+@media (max-width: 900px) {
+  .benefits {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .benefits {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+/* Bottone scuro “Mehr in der App” */
+.btn-app{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: #111;
+  color: #fff;
+  font-weight: 650;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(0,0,0,.12);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.btn-app:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.16);
+}
+.btn-app:focus{ outline: 2px solid #0002; outline-offset: 2px; }
+
+
+/* Hero */
+.hero{position:relative;overflow:hidden;border-radius:18px;background:
+  radial-gradient(1000px 400px at 100% 0, rgba(156,27,31,0.12), transparent 60%),
+  radial-gradient(800px 400px at 0 100%, rgba(0,0,0,0.06), transparent 55%),
+  var(--card);box-shadow:var(--shadow)}
+.hero-in{display:grid;grid-template-columns: 1.05fr .95fr;gap:24px;padding:42px 36px}
+@media (max-width:900px){.hero-in{grid-template-columns:1fr}}
+.hero-art{position:relative;border-radius:14px;overflow:hidden;background:linear-gradient(180deg,#EFEDE9 0%, #F5F2EE 100%)}
+.spark{position:absolute;inset:0;opacity:.7;background:
+  radial-gradient(200px 200px at 75% 25%, rgba(156,27,31,.18), transparent 60%),
+  radial-gradient(260px 240px at 15% 75%, rgba(0,0,0,.06), transparent 60%)}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:.8rem;color:#222;background:rgba(250,249,247,.7)}
+.badge-row{display:flex;gap:10px;flex-wrap:wrap}
+
+
+/* HERO — immagine a tutta larghezza nel box */
+.card-preview {
+  position: absolute;
+  inset: 0; /* occupa tutto il box hero-art */
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.deal-full {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* overlay testo sopra l’immagine */
+.deal-overlay{
+  position: absolute;
+  inset: auto 0 0 0;      /* bottom:0; left:0; right:0 */
+  padding: 20px;
+  color: #fff;
+  border-radius: 0 0 16px 16px;
+  background: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,0));
+  z-index: 1;
+}
+
+.deal-overlay b{
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+
+/* puoi tenere la tua .badge-row esistente; se serve sovrascrivi così: */
+.badge-row{ display:flex; gap:8px; flex-wrap:wrap; }
+.badge{
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.3);
+  color:#fff;
+  font-weight:500;
+}
+
+/* responsive: abbassa l’altezza su mobile */
+@media (max-width: 720px){
+  .card-preview{ height: 220px; }
+}
+
+/* Effetto hover elegante sull'immagine hero */
+.card-preview {
+  transition: transform .6s ease, filter .6s ease;
+}
+.card-preview:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+
+/* Proof row */
+.proof{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+@media (max-width:700px){.proof{grid-template-columns:1fr}}
+.proof-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);text-align:center}
+.proof-card b{font-size:1.35rem}
+.proof-card span{display:block;color:var(--muted);font-size:.92rem}
+
+/* Generic grids/cards */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:900px){.grid-3{grid-template-columns:1fr}}
+.mini-card,.how-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+
+
+/* HOW – versione a immagine unica */
+.how-phones{
+  display:block;
+  max-width:1120px;   /* regola se vuoi l’immagine più grande/piccola */
+  margin:14px auto;
+}
+.how-phones picture{
+  display:block;
+  background:#f7f5f2;
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.how-phones img{
+  width:100%;
+  height:auto;
+  display:block;
+  aspect-ratio:16/9;   /* mantiene proporzioni e previene layout shift */
+  object-fit:cover;
+}
+
+/* HOW text steps – Premium style */
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+  text-align: center;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 10px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+}
+
+.step-dot {
+  background: #E73041;
+  color: #fff;
+  font-weight: 700;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  box-shadow: 0 0 0 4px rgba(231,48,65,0.1);
+}
+
+.step b {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.step p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+  max-width: 280px;
+}
+
+@media (max-width:1000px){ .how-phones{grid-template-columns:1fr 1fr} }
+@media (max-width:680px){ .how-phones{grid-template-columns:1fr} }
+.how-item{margin:0;background:var(--card);border:1px solid var(--line);
+  border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.how-item picture{display:block;background:#f7f5f2}
+.how-item img{width:100%;height:auto;display:block;aspect-ratio:9/18;object-fit:cover}
+.how-item figcaption{display:flex;gap:12px;align-items:flex-start;padding:14px 16px}
+.step-dot{width:28px;height:28px;border-radius:999px;display:grid;place-items:center;
+  font-weight:700;font-size:.9rem;background:#2fbf71;color:#fff;flex:0 0 28px}
+.how-cta{margin-top:18px;text-align:center}
+
+/* Benefits */
+.benefits{display:grid;grid-template-columns: repeat(12,1fr);gap:16px}
+.benefit{grid-column: span 4;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+@media (max-width:900px){.benefit{grid-column: span 6}}
+@media (max-width:640px){.benefit{grid-column: span 12}}
+.benefit-media{display:block;aspect-ratio:16/9;overflow:hidden;border-bottom:1px solid var(--line)}
+.benefit-media img{width:100%;height:100%;object-fit:cover;display:block}
+.benefit-body{padding:16px}
+.benefit-title{font-weight:700}
+.benefit-sub{color:var(--muted);font-size:.95rem;margin:6px 0 12px}
+.btn-unlock{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:10px;padding:12px 14px;border-radius:10px;background:transparent;border:1px solid var(--accent);color:var(--accent-ink);font-weight:650;transition:.15s ease}
+.btn-unlock:hover{background:rgba(156,27,31,0.06);transform:translateY(-1px)}
+
+/* Filters */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.filter{padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;cursor:pointer;transition:.15s ease}
+.filter.active{border-color:var(--accent);color:var(--accent-ink)}
+.filter:focus,.btn:focus,.btn-unlock:focus{outline:2px solid #0003;outline-offset:2px}
+
+/* MAP SECTION */
+#club-map {
+  height: 420px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  background: #f6f4f1;
+  margin-top: 18px;
+}
+ .map-cta{margin-top:12px;text-align:right}
+.link-app{font-weight:600;border-bottom:1px solid #0002;padding-bottom:2px}
+.link-app:hover{opacity:.8}
+
+
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:900px){.testi-grid{grid-template-columns:1fr}}
+.testi{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+.testi figcaption{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.avatar{border-radius:50%;object-fit:cover}
+.testi blockquote{margin:0;color:#222;font-size:1rem;line-height:1.5}
+
+
+/* FAQ + CTA */
+.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+.faq details+details{margin-top:10px}
+.final-cta{margin-top:36px;display:flex;align-items:center;justify-content:space-between;gap:16px;background:linear-gradient(180deg,#fff,#F5F3F0);border:1px solid var(--line);border-radius:16px;padding:18px 20px;box-shadow:var(--shadow)}
+.final-cta p{margin:0;color:#444}
+
+
+/* DOWNLOAD SECTION */
+.download {
+  text-align: center;
+  background: linear-gradient(180deg, #fff, #F5F3F0);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.store-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.badge-app {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #111;
+  color: #111;
+  font-weight: 700;
+  background: #fff;
+}
+
+.badge-app:hover {
+  background: #111;
+  color: #fff;
+}
+

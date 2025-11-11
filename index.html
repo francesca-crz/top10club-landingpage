@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Top10 Club — Premium-Mitgliedschaft</title>
+  <meta name="description" content="Kuratiere Vorteile in Essen, Wellness, Kultur & Freizeit. Exklusive Deals in Berlin für Mitglieder des Top10 Club.">
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+<script
+  defer
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- Header (lasciamo layout attuale del sito finché non migra) -->
+    <header class="topbar" aria-label="Site header">
+      <div class="brand">
+  <img src="images/logos/top10-logo.svg" alt="Top10 Berlin" height="28" />
+</div>
+      <nav class="nav" aria-label="Primary">
+        <a href="#why">Warum beitreten</a>
+        <a href="#how">So funktioniert’s</a>
+        <a href="#benefits">Vorteile</a>
+        <a href="#faq">FAQ</a>
+        <a href="#join" class="btn btn-primary">Jetzt beitreten</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-in">
+        <div>
+
+          <div class="kicker">Mitgliederbereich</div>
+          <h1 class="h1" id="hero-title">Tritt dem Club bei – Zugang zu Berlins feinsten Erlebnissen</h1>
+          <p class="sub">Exklusive Vorteile bei Restaurants, Spas und Kulturorten – monatlich aktualisiert.</p>
+          <div class="cta-row">
+            <a href="#join" class="btn btn-primary">Jetzt beitreten</a>
+            <a href="#benefits" class="btn btn-ghost">Alle Vorteile ansehen</a>
+          </div>
+          <div class="proof" aria-label="Zahlen & Vertrauen">
+            <div class="proof-card"><b>100+</b><span>Premium-Partner</span></div>
+            <div class="proof-card"><b>6 Kategorien</b><span>Essen bis Familie</span></div>
+            <div class="proof-card"><b>Jederzeit kündbar</b><span>Ohne Bindung</span></div>
+          </div>
+        </div>
+
+         <!-- Hero Art con immagine -->
+    <div class="hero-art" aria-hidden="true">
+      <div class="spark"></div>
+
+      <div class="card-preview">
+        <picture>
+          <source srcset="images/hero/hero-berlin-1600.webp" type="image/webp" />
+          <img
+            src="images/hero/hero-berlin-1600.jpg"
+            alt="Berlin Skyline – Beispiel-Deal"
+            class="deal-full"
+            loading="lazy"
+          />
+        </picture>
+
+        <div class="deal-overlay">
+          <b>Mitglieder-Deal</b>
+          <div class="badge-row">
+            <span class="badge">Kuratiert</span>
+            <span class="badge">Schnelles Check-in</span>
+            <span class="badge">Ganz Berlin</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- WHY -->
+    <section class="section" id="why" aria-labelledby="why-title">
+      <h2 class="h2" id="why-title">Warum Top10 Club</h2>
+      <div class="grid-3">
+        <div class="mini-card"><b>Smarter entdecken</b><div class="muted">Wir filtern das Rauschen. Du bekommst die Highlights.</div></div>
+        <div class="mini-card"><b>Echte Vorteile</b><div class="muted">2-für-1, Upgrades, VIP-Zugang.</div></div>
+        <div class="mini-card"><b>Immer verfügbar</b><div class="muted">Digitale Mitgliedskarte. Einfaches Check-in.</div></div>
+      </div>
+    </section>
+
+    <!-- SO FUNKTIONIERT'S -->
+   <section class="section" id="how" aria-labelledby="how-title">
+  <h2 class="h2" id="how-title">So funktioniert’s</h2>
+
+  <div class="how-phones">
+    <picture>
+      <source srcset="images/how/phones-overview-1600.webp.jpg" type="image/webp" />
+      <img src="images/how/phones-overview-1600.jpg"
+           alt="Top10 Club App – Karte, Deal und Check-in Screens"
+           loading="lazy" width="1600" height="900" />
+    </picture>
+    <div class="how-steps">
+  <div class="step">
+    <div class="step-dot">1</div>
+    <div>
+      <b>Ort finden</b>
+      <p>Suche Partner-Locations in der Karte oder Liste in deiner Nähe.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-dot">2</div>
+    <div>
+      <b>Vorteil buchen</b>
+      <p>Wähle dein Lieblingsangebot und sichere es dir mit nur einem Klick.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-dot">3</div>
+    <div>
+      <b>Einlösen & genießen</b>
+      <p>Zeig deine digitale Karte vor Ort und profitiere von exklusiven Rabatten.</p>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="how-cta">
+    <a href="#join" class="btn btn-primary">Jetzt beitreten</a>
+  </div>
+</section>
+
+<!-- MAP SECTION -->
+<section class="section" id="map" aria-labelledby="map-title">
+  <h2 class="h2" id="map-title">Berlin auf einen Blick</h2>
+  <p class="sub">Entdecke über 100 Partner-Locations in ganz Berlin — von Wellness bis Nachtleben.</p>
+  <div id="club-map" role="img" aria-label="Top10 Club Partner auf der Berlin-Karte"></div>
+</section>
+
+
+    <!-- FEATURED BENEFITS (6 card, una per categoria) -->
+    <section class="section" id="benefits" aria-labelledby="benefits-title">
+      <h2 class="h2" id="benefits-title">Ausgewählte Club-Vorteile</h2>
+
+      <!-- Filtri: 6 categorie -->
+      <div class="filters" role="tablist" aria-label="Kategorien">
+        <button class="filter active" data-filter="all" role="tab" aria-selected="true">Alle</button>
+        <button class="filter" data-filter="Essen" role="tab">Essen</button>
+        <button class="filter" data-filter="Nachtleben" role="tab">Nachtleben</button>
+        <button class="filter" data-filter="Shopping" role="tab">Shopping</button>
+        <button class="filter" data-filter="Freizeit" role="tab">Freizeit</button>
+        <button class="filter" data-filter="Wellness" role="tab">Wellness</button>
+        <button class="filter" data-filter="Familie" role="tab">Familie</button>
+      </div>
+
+      <div class="benefits" id="benefitGrid">
+        <!-- Wellness -->
+        <article class="benefit" data-cat="Wellness">
+          <picture class="benefit-media">
+            <source srcset="images/partners/liquidrom-768.webp 768w, images/partners/liquidrom-768.webp 1280w" type="image/webp" />
+            <img src="images/partners/liquidrom-1280.jpg"
+                 srcset="images/partners/liquidrom-768.webp 768w, images/partners/liquidrom-1280.jpg 1280w"
+                 sizes="(max-width:640px) 100vw, (max-width:900px) 50vw, 33vw"
+                 alt="Liquidrom – Klangkuppel und Thermalbecken"
+                 loading="lazy" width="1280" height="720" />
+          </picture>
+          <div class="benefit-body">
+            <div class="benefit-title">Liquidrom</div>
+            <div class="benefit-sub">Erlebe pure Entspannung: Gönn dir 2-für-1 Eintritt in die Klangkuppel und das 36 °C Salzwasserbecken im Herzen Kreuzbergs. Sauna, Unterwassermusik und Lounge-Bar warten auf deine Auszeit.</div>
+            <span class="chip">Exklusiv für Mitglieder</span>
+          </div>
+          <button class="btn-unlock">Vorteil freischalten</button>
+        </article>
+
+        <!-- Freizeit -->
+        <article class="benefit" data-cat="Freizeit">
+          <picture class="benefit-media">
+            <source srcset="images/partners/evogolf-768.webp 768w, images/partners/evogolf-768.webp 1280w" type="image/webp" />
+            <img src="images/partners/kollgarten-1280.jpg"
+                 srcset="images/partners/evogolf-768.webp 768w, images/partners/evogolf-1280.jpg 1280w"
+                 sizes="(max-width:640px) 100vw, (max-width:900px) 50vw, 33vw"
+                 alt="EvoGolf – Indoor Golf Simulator in Tiergarten"
+                 loading="lazy" width="1280" height="720" />
+          </picture>
+          <div class="benefit-body">
+            <div class="benefit-title">EvoGolf</div>
+            <div class="benefit-sub">Indoor-Golf der Extraklasse: Spiel weltweit berühmte Golfplätze auf TrackMan-Simulatoren, ob Anfänger oder Profi – inkl. Drinks & Bar-Lounge. Social-Fun trifft Sport mitten in Berlin.</div>
+            <span class="chip">Exklusiv für Mitglieder</span>
+          </div>
+          <button class="btn-unlock">Vorteil freischalten</button>
+        </article>
+
+        <!-- Essen -->
+        <article class="benefit" data-cat="Essen">
+          <picture class="benefit-media">
+            <source srcset="images/partners/bonvivant-768.webp 768w, images/partners/bonvivant-768.webp 1280w" type="image/webp" />
+            <img src="images/partners/bonvivant-1280.jpg"
+                 srcset="images/partners/bonvivant-768.webp 768w, images/partners/bonvivant-1280.jpg 1280w"
+                 sizes="(max-width:640px) 100vw, (max-width:900px) 50vw, 33vw"
+                 alt="Bonvivant – Vegetarische Küche, City West"
+                 loading="lazy" width="1280" height="720" />
+          </picture>
+          <div class="benefit-body">
+            <div class="benefit-title">Bonvivant</div>
+            <div class="benefit-sub">Feinschmecker willkommen: Genieße ein 6-Gänge Menü mit 20 % Rabatt im modernen vegetarischen Restaurant City West. Kulinarische Kreativität trifft entspannten Genuss.</div>
+            <span class="chip">Exklusiv für Mitglieder</span>
+          </div>
+          <button class="btn-unlock">Vorteil freischalten</button>
+        </article>
+
+        <!-- Nachtleben -->
+        <article class="benefit" data-cat="Nachtleben">
+          <picture class="benefit-media">
+            <source srcset="images/partners/saphire-bar-768.webp 768w, images/partners/saphire-bar-768.webp 1280w" type="image/webp" />
+            <img src="images/partners/saphire-bar-1280.jpg"
+                 srcset="images/partners/saphire-bar-768.webp 768w, images/partners/saphire-bar-1280.jpg 1280w"
+                 sizes="(max-width:640px) 100vw, (max-width:900px) 50vw, 33vw"
+                 alt="Saphire Bar – Signature Drinks, Mitte"
+                 loading="lazy" width="1280" height="720" />
+          </picture>
+          <div class="benefit-body">
+            <div class="benefit-title">Saphire Bar</div>
+            <div class="benefit-sub">Signature-Cocktails, über 150 Whiskys, 70 Rum- und 40 Vodkasorten. Genieße stilvolles Lounge-Flair, luxuriöse Atmosphäre und außergewöhnliche Drinks mitten im Herzen von Prenzlauer Berg – perfekt für einen besonderen Abend.</div>
+            <span class="chip">Exklusiv für Mitglieder</span>
+          </div>
+          <button class="btn-unlock">Vorteil freischalten</button>
+        </article>
+
+        <!-- Shopping -->
+        <article class="benefit" data-cat="Shopping">
+          <picture class="benefit-media">
+            <source srcset="images/partners/kollgarten-768.webp 768w, images/partners/kollgarten-768.webp 1280w" type="image/webp" />
+            <img src="images/partners/kollgarten-1280.jpg"
+                 srcset="images/partners/kollgarten-768.webp 768w, images/partners/kollgarten-1280.jpg 1280w"
+                 sizes="(max-width:640px) 100vw, (max-width:900px) 50vw, 33vw"
+                 alt="Koll'garten – Lokale Rösterei & Shop"
+                 loading="lazy" width="1280" height="720" />
+          </picture>
+          <div class="benefit-body">
+            <div class="benefit-title">Koll'garten </div>
+            <div class="benefit-sub">Seit 2025 bietet der Koll’garten in Prenzlauer Berg frische Crêpes, Galettes und Waffeln – süß oder herzhaft, vegan und glutenfrei. Genieße 10 % Rabatt, entspanne im gemütlichen Café und erlebe französischen Charme mitten in Berlin.</div>
+            <span class="chip">Exklusiv für Mitglieder</span>
+          </div>
+          <button class="btn-unlock">Vorteil freischalten</button>
+        </article>
+
+        <!-- Familie -->
+        <article class="benefit" data-cat="Familie">
+          <picture class="benefit-media">
+            <source srcset="images/partners/bergwerk-768.webp 768w, images/partners/bergwerk-768.webp 1280w" type="image/webp" />
+            <img src="images/partners/bergwerk-1280.jpg"
+                 srcset="images/partners/bergwerk-768.webp 768w, images/partners/bergwerk-1280.jpg 1280w"
+                 sizes="(max-width:640px) 100vw, (max-width:900px) 50vw, 33vw"
+                 alt="Bergwerk – Kletterpark für Familien"
+                 loading="lazy" width="1280" height="720" />
+          </picture>
+          <div class="benefit-body">
+            <div class="benefit-title">Bergwerk</div>
+            <div class="benefit-sub">Abenteuer für Groß und Klein: Im Erlebnis-Indoor-Kletterpark BergWerk.Berlin erwarten dich bis zu 20 Meter Kletterhöhe, spannende Parcours und Spielzonen. Sichere dir 15 % Rabatt auf den Familienpass und entdecke Spaß und Bewegung im Herzen von Hellersdorf.</div>
+            <span class="chip">Exklusiv für Mitglieder</span>
+          </div>
+          <button class="btn-unlock">Vorteil freischalten</button>
+        </article>
+      </div>  <!-- fine benefitGrid -->
+    </section>
+
+<!-- CTA: More in App -->
+      <div class="benefits-cta">
+        <a href="#download" class="btn btn-app js-scroll" aria-label="Mehr in der App ansehen">
+          Mehr in der App
+        </a>
+      </div>
+
+    <div class="divider"></div>
+
+
+    <!-- TESTIMONIALS -->
+<section class="section" id="testimonials" aria-labelledby="testi-title">
+  <h2 class="h2" id="testi-title">Was Mitglieder sagen</h2>
+
+  <div class="testi-grid">
+    <figure class="testi">
+      <figcaption>
+        <img class="avatar" src="images/logos/user1.jpg" alt="" loading="lazy" width="48" height="48">
+        <div><b>Laura K.</b><div class="muted">Prenzlauer Berg</div></div>
+      </figcaption>
+      <blockquote>„Die Auswahl ist kuratiert, kein Overload. Ich nutze die Vorteile jede Woche.“</blockquote>
+    </figure>
+
+    <figure class="testi">
+      <figcaption>
+        <img class="avatar" src="images/logos/user2.jpg" alt="" loading="lazy" width="48" height="48">
+        <div><b>Daniel S.</b><div class="muted">Kreuzberg</div></div>
+      </figcaption>
+      <blockquote>„2-für-1 im Spa und gute Bars – hat sich nach zwei Wochen bezahlt gemacht.“</blockquote>
+    </figure>
+
+    <figure class="testi">
+      <figcaption>
+        <img class="avatar" src="images/logos/user3.jpg" alt="" loading="lazy" width="48" height="48">
+        <div><b>Maya R.</b><div class="muted">Charlottenburg</div></div>
+      </figcaption>
+      <blockquote>„Einfaches Check-in, klare Regeln, und wirklich starke Partner.“</blockquote>
+    </figure>
+  </div>
+</section>
+
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <h2 class="h2" id="faq-title">FAQ</h2>
+      <details>
+        <summary><b>Wie funktioniert die Mitgliedschaft?</b></summary>
+        <p class="muted">Ein monatlicher Fixpreis schaltet Vorteile bei kuratierten Partnern frei. Deine digitale Mitgliedskarte liegt im Account. Jeden Monat kommen neue Benefits hinzu, damit immer etwas Frisches dabei ist.</p>
+      </details>
+      <details>
+        <summary><b>Was kostet es?</b></summary>
+        <p class="muted">Ab €15,90/Monat. Transparent, ohne versteckte Gebühren und ohne komplizierte Stufen. Jahrespläne enthalten saisonale Extras und gelegentliche Einladungen.</p>
+      </details>
+      <details>
+        <summary><b>Kann ich jederzeit kündigen?</b></summary>
+        <p class="muted">Ja. Einfach im Dashboard verwalten. Die Kündigung greift sofort, bereits bestätigte Buchungen bleiben bestehen.</p>
+      </details>
+    </section>
+
+
+<!-- DOWNLOAD -->
+<section class="section download" id="download" aria-labelledby="dl-title">
+  <h2 class="h2" id="dl-title">App herunterladen</h2>
+  <p class="sub">Top10 Club immer dabei – entdecken, einlösen, genießen.</p>
+  <div class="store-buttons">
+    <a class="badge-app" href="https://apps.apple.com/de/app/" target="_blank" rel="noopener" aria-label="Laden im App Store">App Store</a>
+    <a class="badge-app" href="https://play.google.com/store/apps/details?id=" target="_blank" rel="noopener" aria-label="Jetzt bei Google Play">Google Play</a>
+  </div>
+</section>
+
+
+    <!-- CTA finale -->
+    <section class="final-cta" id="join" aria-labelledby="join-title">
+      <p id="join-title"><strong>Erlebe Berlin anders.</strong> Ruhig, kuratiert und immer deine Zeit wert.</p>
+      <div>
+        <a href="#" class="btn btn-primary">Jetzt beitreten</a>
+        <a href="#benefits" class="btn btn-ghost">Alle Vorteile ansehen</a>
+      </div>
+    </section>
+
+    <footer>
+      <div>© Top10 Club. Alle Rechte vorbehalten.</div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
