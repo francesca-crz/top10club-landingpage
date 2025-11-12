@@ -440,6 +440,22 @@ footer{margin:40px 0 20px;color:#777;font-size:.9rem}
   background: #f6f4f1;
   margin-top: 18px;
 }
+
+/* Spaziatura sotto la mappa */
+#map {
+  margin-bottom: 60px; /* aumenta lo spazio verticale */
+}
+
+/* Allineamento orizzontale coerente */
+#map, #benefits {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
  .map-cta{margin-top:12px;text-align:right}
 .link-app{font-weight:600;border-bottom:1px solid #0002;padding-bottom:2px}
 .link-app:hover{opacity:.8}
