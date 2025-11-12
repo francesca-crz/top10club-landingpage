@@ -33,74 +33,99 @@
       </nav>
     </header>
 
-    <!-- HERO -->
-    <section class="hero" id="hero" aria-labelledby="hero-title">
-      <div class="hero-in">
-        <div>
+  
+     <!-- HERO -->
+<section class="hero" id="hero" aria-labelledby="hero-title">
+  <div class="hero-in">
+    <!-- Colonna sinistra -->
+    <div class="hero-left">
+      <div class="kicker">Mitgliederbereich</div>
+      <h1 class="h1" id="hero-title">Der Top10 Club – Zugang zu Berlins feinsten Erlebnissen</h1>
+      <p class="sub">Sichere dir exklusive Vorteile bei den besten Restaurants, Spas und Kulturangeboten.</p>
 
-          <div class="kicker">Mitgliederbereich</div>
-          <h1 class="h1" id="hero-title">Tritt dem Club bei – Zugang zu Berlins feinsten Erlebnissen</h1>
-          <p class="sub">Exklusive Vorteile bei Restaurants, Spas und Kulturorten – monatlich aktualisiert.</p>
-          <div class="cta-row">
-            <a href="#join" class="btn btn-primary">Jetzt beitreten</a>
-            <a href="#benefits" class="btn btn-ghost">Alle Vorteile ansehen</a>
-          </div>
-          <div class="proof" aria-label="Zahlen & Vertrauen">
-            <div class="proof-card"><b>100+</b><span>Premium-Partner</span></div>
-            <div class="proof-card"><b>6 Kategorien</b><span>Essen bis Familie</span></div>
-            <div class="proof-card"><b>Jederzeit kündbar</b><span>Ohne Bindung</span></div>
-          </div>
-        </div>
+      <div class="cta-row">
+        <a href="#" class="btn btn-primary">Jetzt beitreten</a>
+        <a href="#benefits" class="btn btn-outline">Alle Vorteile ansehen</a>
+      </div>
 
-         <!-- Hero Art con immagine -->
-    <div class="hero-art" aria-hidden="true">
+      <!-- 3 categorie con chip piccola -->
+      <div class="hero-categories">
+  <a class="hero-cat" href="#benefits" data-cat="Wellness">
+    <img src="images/hero/cat-spa.jpg" alt="Wellness & Spa" loading="lazy">
+    <span class="chip onimg">Wellness</span>
+  </a>
+
+  <a class="hero-cat" href="#benefits" data-cat="Kultur">
+    <img src="images/hero/cat-kultur.jpg" alt="Theater & Kultur" loading="lazy">
+    <span class="chip onimg">Kultur</span>
+  </a>
+
+  <a class="hero-cat" href="#benefits" data-cat="Essen">
+    <img src="images/hero/cat-food.jpg" alt="Essen & Drinks" loading="lazy">
+    <span class="chip onimg">Essen</span>
+  </a>
+</div>
+</div>
+
+    <!-- Colonna destra: hero card con skyline + chip -->
+    <div class="hero-art">
       <div class="spark"></div>
-
       <div class="card-preview">
         <picture>
           <source srcset="images/hero/hero-berlin-1600.webp" type="image/webp" />
-          <img
-            src="images/hero/hero-berlin-1600.jpg"
-            alt="Berlin Skyline – Beispiel-Deal"
-            class="deal-full"
-            loading="lazy"
-          />
+          <img src="images/hero/hero-berlin-1600.jpg" alt="Berlin Skyline – Beispiel-Deal" class="deal-full" loading="lazy" />
         </picture>
 
-        <div class="deal-overlay">
-          <b>Mitglieder-Deal</b>
-          <div class="badge-row">
-            <span class="badge">Kuratiert</span>
-            <span class="badge">Schnelles Check-in</span>
-            <span class="badge">Ganz Berlin</span>
-          </div>
-        </div>
+    
       </div>
     </div>
   </div>
 </section>
 
+
+
+
     <!-- WHY -->
-    <section class="section" id="why" aria-labelledby="why-title">
-      <h2 class="h2" id="why-title">Warum Top10 Club</h2>
-      <div class="grid-3">
-        <div class="mini-card"><b>Smarter entdecken</b><div class="muted">Wir filtern das Rauschen. Du bekommst die Highlights.</div></div>
-        <div class="mini-card"><b>Echte Vorteile</b><div class="muted">2-für-1, Upgrades, VIP-Zugang.</div></div>
-        <div class="mini-card"><b>Immer verfügbar</b><div class="muted">Digitale Mitgliedskarte. Einfaches Check-in.</div></div>
+    <section class="section" id="why" aria-label="Warum Top10 Club">
+  <div class="benefits-unboxed">
+    <div class="benefit-u">
+      <!-- Icona: list/filter -->
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h12M3 12h18M3 18h8" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+      <div>
+        <b>Smarter entdecken</b>
+        <div class="muted">Wir filtern das Rauschen. Du bekommst die Highlights.</div>
       </div>
-    </section>
+    </div>
+    <div class="benefit-u">
+      <!-- Icona: star -->
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l3 6 7 .9-5 4.6 1.5 6.5L12 17l-6.5 4 1.5-6.5-5-4.6L9 9z" fill="currentColor"/></svg>
+      <div>
+        <b>Echte Vorteile</b>
+        <div class="muted">2-für-1, Upgrades, VIP-Zugang.</div>
+      </div>
+    </div>
+    <div class="benefit-u">
+      <!-- Icona: card/qr -->
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10H7zM3 3h4v4H3zM17 3h4v4h-4zM3 17h4v4H3zM17 17h4v4h-4z" fill="currentColor"/></svg>
+      <div>
+        <b>Immer verfügbar</b>
+        <div class="muted">Digitale Mitgliedskarte. Einfaches Check-in.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- SO FUNKTIONIERT'S -->
    <section class="section" id="how" aria-labelledby="how-title">
   <h2 class="h2" id="how-title">So funktioniert’s</h2>
 
-  <div class="how-phones">
-    <picture>
-      <source srcset="images/how/phones-overview-1600.webp.jpg" type="image/webp" />
-      <img src="images/how/phones-overview-1600.jpg"
-           alt="Top10 Club App – Karte, Deal und Check-in Screens"
-           loading="lazy" width="1600" height="900" />
-    </picture>
+  <div class="how-gallery">
+    <img src="images/how/app-map.jpg" alt="Top10Berlin App – Karte" loading="lazy">
+    <img src="images/how/app-offer.jpg" alt="Top10Berlin App – Deal" loading="lazy">
+    <img src="images/how/app-checkin.jpg" alt="Top10Berlin App – Check-in" loading="lazy">
+  </div>
+  
     <div class="how-steps">
   <div class="step">
     <div class="step-dot">1</div>
@@ -144,7 +169,7 @@
 
     <!-- FEATURED BENEFITS (6 card, una per categoria) -->
     <section class="section" id="benefits" aria-labelledby="benefits-title">
-      <h2 class="h2" id="benefits-title">Ausgewählte Club-Vorteile</h2>
+      <h2 class="h2" id="benefits-title">Sneak-Peek unserer Top10 Club Vorteile</h2>
 
       <!-- Filtri: 6 categorie -->
       <div class="filters" role="tablist" aria-label="Kategorien">
@@ -285,24 +310,24 @@
   <div class="testi-grid">
     <figure class="testi">
       <figcaption>
-        <img class="avatar" src="images/logos/user1.jpg" alt="" loading="lazy" width="48" height="48">
-        <div><b>Laura K.</b><div class="muted">Prenzlauer Berg</div></div>
+        <img class="avatar" src="images/testimonials/anna.webp" alt="" loading="lazy" width="48" height="48">
+        <div><b>Anna K.</b><div class="muted">Prenzlauer Berg</div></div>
       </figcaption>
       <blockquote>„Die Auswahl ist kuratiert, kein Overload. Ich nutze die Vorteile jede Woche.“</blockquote>
     </figure>
 
     <figure class="testi">
       <figcaption>
-        <img class="avatar" src="images/logos/user2.jpg" alt="" loading="lazy" width="48" height="48">
-        <div><b>Daniel S.</b><div class="muted">Kreuzberg</div></div>
+        <img class="avatar" src="images/testimonials/max.webp" alt="" loading="lazy" width="48" height="48">
+        <div><b>Max S.</b><div class="muted">Kreuzberg</div></div>
       </figcaption>
       <blockquote>„2-für-1 im Spa und gute Bars – hat sich nach zwei Wochen bezahlt gemacht.“</blockquote>
     </figure>
 
     <figure class="testi">
       <figcaption>
-        <img class="avatar" src="images/logos/user3.jpg" alt="" loading="lazy" width="48" height="48">
-        <div><b>Maya R.</b><div class="muted">Charlottenburg</div></div>
+        <img class="avatar" src="images/testimonials/sara.webp" alt="" loading="lazy" width="48" height="48">
+        <div><b>Sara R.</b><div class="muted">Charlottenburg</div></div>
       </figcaption>
       <blockquote>„Einfaches Check-in, klare Regeln, und wirklich starke Partner.“</blockquote>
     </figure>
@@ -332,11 +357,14 @@
 <section class="section download" id="download" aria-labelledby="dl-title">
   <h2 class="h2" id="dl-title">App herunterladen</h2>
   <p class="sub">Top10 Club immer dabei – entdecken, einlösen, genießen.</p>
-  <div class="store-buttons">
-    <a class="badge-app" href="https://apps.apple.com/de/app/" target="_blank" rel="noopener" aria-label="Laden im App Store">App Store</a>
-    <a class="badge-app" href="https://play.google.com/store/apps/details?id=" target="_blank" rel="noopener" aria-label="Jetzt bei Google Play">Google Play</a>
-  </div>
-</section>
+  <div class="store-badges">
+  <a href="https://apps.apple.com/de/app/" target="_blank" rel="noopener" aria-label="Download on the App Store">
+    <img src="images/store/app-store-badge.png" alt="Download on the App Store" class="badge-store" />
+  </a>
+  <a href="https://play.google.com/store/apps/details?id=" target="_blank" rel="noopener" aria-label="Get it on Google Play">
+    <img src="images/store/google-play-badge.png" alt="Get it on Google Play" class="badge-store" />
+  </a>
+</div>
 
 
     <!-- CTA finale -->
