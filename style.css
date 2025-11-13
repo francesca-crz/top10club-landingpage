@@ -462,7 +462,6 @@ footer{margin:40px 0 20px;color:#777;font-size:.9rem}
 
 
 /* TESTIMONIALS */
-.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .t-avatar{
   width:40px;
   height:40px;
@@ -472,11 +471,108 @@ footer{margin:40px 0 20px;color:#777;font-size:.9rem}
   box-shadow:0 2px 6px rgba(0,0,0,0.15);
 }
 
-@media(max-width:900px){.testi-grid{grid-template-columns:1fr}}
 .testi{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
 .testi figcaption{display:flex;align-items:center;gap:12px;margin-bottom:10px}
 .avatar{border-radius:50%;object-fit:cover}
 .testi blockquote{margin:0;color:#222;font-size:1rem;line-height:1.5}
+
+/* Testimonials – Swiper Slider */
+.testi-swiper{
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.testi-swiper .swiper-wrapper{
+  align-items: stretch;
+}
+
+.testi-swiper .swiper-slide{
+  height: auto;
+  display: flex;
+}
+
+/* Card testimonial interna */
+.testi{
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+}
+
+.testi figcaption{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.testi blockquote{
+  margin: 0;
+  color: #222;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+/* Avatar */
+.avatar{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* TESTIMONIALS – fascia scura stile NeoTaste */
+/* Fascia Testimonial – stile NeoTaste */
+#testimonials {
+  background: #111;                 /* identico a NeoTaste */
+  padding: 20px 0 22px;             /* altezza super compatta */
+  border-radius: 0;                 /* niente curve */
+  margin-top: 20px;                 /* meno spazio sopra */
+}
+
+/* Titolo bianco, vicino alle card */
+#testimonials .h2 {
+  color: #fff;
+  margin-bottom: 10px;              /* molto più compatto */
+  font-size: 1.7rem;
+}
+
+/* Spaziatura interna dello slider */
+.testi-swiper {
+  padding: 10px 0;                  /* come NeoTaste: bassissimo */
+}
+
+/* Stile card */
+.testi {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  border: none;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+}
+
+.testi figcaption {
+  margin-bottom: 8px;
+}
+
+.testi blockquote {
+  color: #222;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+
+/* rimuove margine laterale del container per far sembrare tutto fluido */
+.testi-swiper {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 
 
 /* FAQ + CTA */

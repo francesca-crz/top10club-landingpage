@@ -15,6 +15,8 @@
 </script>
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 <body>
   <div class="wrap">
@@ -125,7 +127,7 @@
     <img src="images/how/app-offer.jpg" alt="Top10Berlin App – Deal" loading="lazy">
     <img src="images/how/app-checkin.jpg" alt="Top10Berlin App – Check-in" loading="lazy">
   </div>
-  
+
     <div class="how-steps">
   <div class="step">
     <div class="step-dot">1</div>
@@ -307,32 +309,75 @@
 <section class="section" id="testimonials" aria-labelledby="testi-title">
   <h2 class="h2" id="testi-title">Was Mitglieder sagen</h2>
 
-  <div class="testi-grid">
-    <figure class="testi">
-      <figcaption>
-        <img class="avatar" src="images/testimonials/anna.webp" alt="" loading="lazy" width="48" height="48">
-        <div><b>Anna K.</b><div class="muted">Prenzlauer Berg</div></div>
-      </figcaption>
-      <blockquote>„Die Auswahl ist kuratiert, kein Overload. Ich nutze die Vorteile jede Woche.“</blockquote>
-    </figure>
+  <div class="swiper testi-swiper">
+    <div class="swiper-wrapper">
 
-    <figure class="testi">
-      <figcaption>
-        <img class="avatar" src="images/testimonials/max.webp" alt="" loading="lazy" width="48" height="48">
-        <div><b>Max S.</b><div class="muted">Kreuzberg</div></div>
-      </figcaption>
-      <blockquote>„2-für-1 im Spa und gute Bars – hat sich nach zwei Wochen bezahlt gemacht.“</blockquote>
-    </figure>
+      <div class="swiper-slide testi-item">
+        <figure class="testi">
+          <figcaption>
+            <img class="avatar" src="images/testimonials/anna.webp" alt="">
+            <div><b>Anna K.</b><div class="muted">Prenzlauer Berg</div></div>
+          </figcaption>
+          <blockquote>„Die Auswahl ist kuratiert, kein Overload. Ich nutze die Vorteile jede Woche.“</blockquote>
+        </figure>
+      </div>
 
-    <figure class="testi">
-      <figcaption>
-        <img class="avatar" src="images/testimonials/sara.webp" alt="" loading="lazy" width="48" height="48">
-        <div><b>Sara R.</b><div class="muted">Charlottenburg</div></div>
-      </figcaption>
-      <blockquote>„Einfaches Check-in, klare Regeln, und wirklich starke Partner.“</blockquote>
-    </figure>
+      <div class="swiper-slide testi-item">
+        <figure class="testi">
+          <figcaption>
+            <img class="avatar" src="images/testimonials/max.webp" alt="">
+            <div><b>Max S.</b><div class="muted">Kreuzberg</div></div>
+          </figcaption>
+          <blockquote>„2-für-1 im Spa und gute Bars – hat sich nach zwei Wochen bezahlt gemacht.“</blockquote>
+        </figure>
+      </div>
+
+      <div class="swiper-slide testi-item">
+        <figure class="testi">
+          <figcaption>
+            <img class="avatar" src="images/testimonials/sara.webp" alt="">
+            <div><b>Sara R.</b><div class="muted">Charlottenburg</div></div>
+          </figcaption>
+          <blockquote>„Einfaches Check-in, klare Regeln, und wirklich starke Partner.“</blockquote>
+        </figure>
+      </div>
+      <!-- New Testimonial 4 -->
+      <div class="swiper-slide testi-item">
+        <figure class="testi">
+          <figcaption>
+            <img class="avatar" src="images/testimonials/david.webp" alt="">
+            <div><b>David R.</b><div class="muted">Mitte</div></div>
+          </figcaption>
+          <blockquote>„Perfekt für spontane Pläne. Die Vorteile benutze ich jede Woche.“</blockquote>
+        </figure>
+      </div>
+
+      <!-- New Testimonial 5 -->
+      <div class="swiper-slide testi-item">
+        <figure class="testi">
+          <figcaption>
+            <img class="avatar" src="images/testimonials/leo.webp" alt="">
+            <div><b>Leo T.</b><div class="muted">Wedding</div></div>
+          </figcaption>
+          <blockquote>„Top Deals und richtig gute Auswahl an Partnern in der ganzen Stadt.“</blockquote>
+        </figure>
+      </div>
+
+      <!-- New Testimonial 6 -->
+      <div class="swiper-slide testi-item">
+        <figure class="testi">
+          <figcaption>
+            <img class="avatar" src="images/testimonials/mila.webp" alt="">
+            <div><b>Mila S.</b><div class="muted">Friedrichshain</div></div>
+          </figcaption>
+          <blockquote>„Einfach, schnell und mega praktisch für Essen, Spa und Ausgehen.“</blockquote>
+        </figure>
+      </div>
+
+    </div>
   </div>
 </section>
+
 
 
     <!-- FAQ -->
@@ -376,11 +421,44 @@
       </div>
     </section>
 
-    <footer>
+        <footer>
       <div>© Top10 Club. Alle Rechte vorbehalten.</div>
     </footer>
   </div>
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Script mappa + filtri -->
   <script src="app.js"></script>
+
+  <!-- Slider Testimonials -->
+  <!-- Slider Testimonials -->
+<script>
+  const testiSwiper = new Swiper('.testi-swiper', {
+    loop: true,
+    speed: 1100,
+    autoplay: {
+      delay: 1200,
+      disableOnInteraction: false
+    },
+    spaceBetween: 24,
+    breakpoints: {
+      0: {
+        slidesPerView: 1.05,
+        spaceBetween: 16
+      },
+      640: {
+        slidesPerView: 1.6,
+        spaceBetween: 20
+      },
+      1024: {
+        slidesPerView: 2.3,
+        spaceBetween: 24
+      }
+    }
+  });
+</script>
+
 </body>
 </html>
